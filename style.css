@@ -1,0 +1,77 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    width: 90%; /* Cambiar a porcentaje para ser responsivo */
+    max-width: 700px; /* Ancho máximo */
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+h1 {
+    font-size: 2rem; /* Tamaño de fuente adaptable */
+    color: #4caf50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem; /* Tamaño de fuente adaptable */
+    color: #4caf50;
+    margin-top: 20px;
+}
+
+.main-button {
+    background-color: transparent;
+    border: 2px solid #00ff00;
+    padding: 15px 30px;
+    font-size: 1.25rem; /* Tamaño de fuente adaptable */
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.main-button:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+/* Media queries para hacer el texto más pequeño en dispositivos móviles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .main-button {
+        font-size: 1rem;
+    }
+}

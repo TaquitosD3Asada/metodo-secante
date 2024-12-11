@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Información del Método de la Secante</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Información del Método de la Secante</h1>
+        <p>
+            El método de la secante es un método iterativo utilizado para encontrar raíces de funciones no lineales, 
+            similar al método de Newton-Raphson, pero sin necesidad de calcular la derivada de la función. 
+            Este método utiliza dos aproximaciones sucesivas para generar una línea secante, y con base en esta línea, 
+            obtiene la siguiente aproximación de la raíz.
+        </p>
+        <h2>Fórmula del Método</h2>
+        <p>
+            Dada una función <strong>f(x)</strong> y dos valores iniciales <strong>x<sub>0</sub></strong> y <strong>x<sub>1</sub></strong>, 
+            la fórmula del método de la secante es:
+        </p>
+        <p><strong>x<sub>n+1</sub> = x<sub>n</sub> - (f(x<sub>n</sub>) * (x<sub>n</sub> - x<sub>n-1</sub>)) / (f(x<sub>n</sub>) - f(x<sub>n-1</sub>))</strong></p>
+        
+        <h2>Pasos del Método de la Secante</h2>
+        <ol>
+            <li>Definir la función f(x) y dos valores iniciales <strong>x<sub>0</sub></strong> y <strong>x<sub>1</sub></strong>.</li>
+            <li>Calcular el siguiente valor utilizando la fórmula:
+                <strong>x<sub>n+1</sub> = x<sub>n</sub> - (f(x<sub>n</sub>) * (x<sub>n</sub> - x<sub>n-1</sub>)) / (f(x<sub>n</sub>) - f(x<sub>n-1</sub>))</strong>.
+            </li>
+            <li>Repetir el paso 2 hasta que la diferencia entre <strong>x<sub>n</sub></strong> y <strong>x<sub>n+1</sub></strong> sea menor que un valor de tolerancia.</li>
+        </ol>
+        
+        <h2>Ejemplo Práctico</h2>
+        <p>
+            Supongamos que queremos encontrar la raíz de la función <strong>f(x) = x² - 4</strong>. Aplicamos el método de la secante siguiendo estos pasos:
+        </p>
+        <ol>
+            <li>
+                Elegimos dos valores iniciales: 
+                <strong>x<sub>0</sub> = 1</strong> y <strong>x<sub>1</sub> = 2</strong>.
+            </li>
+            <li>
+                Calculamos el siguiente valor:
+                <strong>x<sub>2</sub> = x<sub>1</sub> - (f(x<sub>1</sub>) * (x<sub>1</sub> - x<sub>0</sub>)) / (f(x<sub>1</sub>) - f(x<sub>0</sub>)) = 2 - ((2)² - 4) * (2 - 1) / ((2)² - 4 - (1)² + 4) = 2 - (0) * (1) / (0) = 2</strong>.
+            </li>
+            <li>
+                Como la diferencia entre <strong>x<sub>n</sub></strong> y <strong>x<sub>n+1</sub></strong> es menor que la tolerancia, hemos encontrado la raíz.
+            </li>
+        </ol>
+        <p>
+            El resultado final indica que la raíz de la función <strong>f(x) = x² - 4</strong> se encuentra en 
+            <strong>x = 2</strong>.
+        </p>
+        <button class="main-button" onclick="window.location.href='../main.html'">Volver al Inicio</button>
+    </div>
+</body>
+</html>
